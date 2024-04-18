@@ -1,10 +1,11 @@
 import { RuntimeModule, RuntimeGlobals, Template } from 'webpack';
 
-export default class JsonpChunkLoadingRuntimeModule extends RuntimeModule {
+export default class OnDemandChunkLoadingRuntimeModule extends RuntimeModule {
   _runtimeRequirements: Set<string>;
 
   constructor(runtimeRequirements: Set<string>) {
-    super('on demand chunk loading', RuntimeModule.STAGE_ATTACH);
+    // this defines the runtime script injection order
+    super('jsonp async chunk loading', RuntimeModule.STAGE_ATTACH);
     this._runtimeRequirements = runtimeRequirements;
   }
 
