@@ -1,0 +1,49 @@
+{
+  "name": "on-demand-chunk-loading-webpack-plugin",
+  "version": "0.8.0",
+  "description": "A webpack plugin to load chunks on demand",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/webpack": "^5.28.5",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-node": "^11.1.0",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf ./dist/",
+    "compile": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "fix": "eslint --fix src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramirezcgn/on-demand-chunk-loading-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack plugin"
+  ],
+  "author": "Nicolas Ramirez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramirezcgn/on-demand-chunk-loading-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/ramirezcgn/on-demand-chunk-loading-webpack-plugin#readme",
+  "files": [
+    "dist"
+  ]
+}
