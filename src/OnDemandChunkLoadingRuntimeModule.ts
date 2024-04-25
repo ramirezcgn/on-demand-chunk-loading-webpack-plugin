@@ -11,10 +11,10 @@ export default class OnDemandChunkLoadingRuntimeModule extends RuntimeModule {
 
   generate() {
     const withOnChunkLoad = this._runtimeRequirements.has(
-      RuntimeGlobals.onChunksLoaded
+      RuntimeGlobals.onChunksLoaded,
     );
     const withEnsureChunk = this._runtimeRequirements.has(
-      RuntimeGlobals.ensureChunk
+      RuntimeGlobals.ensureChunk,
     );
     // Check https://github.com/webpack/webpack/blob/main/lib/web/JsonpChunkLoadingRuntimeModule.js#L258
     return withOnChunkLoad && withEnsureChunk
